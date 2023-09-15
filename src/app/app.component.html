@@ -1,0 +1,29 @@
+<H1>scripting Lab 1</H1>
+
+<div *ngIf="players.length>0">PLayer < list1</div>
+<div *ngIf="players.length==0">PLayer = list2</div>
+<div *ngIf="players.length<0">PLayer > list3</div>
+
+<div>
+  <li *ngFor="let i of players">{{i}}</li>
+  <p>{{message}}</p>
+</div>
+<div>
+  <input [(ngModel)]="inputValue" placeholder="here">
+  <p>{{inputValue}}</p>
+</div>
+
+<H1>scripting Lab 2</H1>
+<h2>todolist</h2>
+<ul style="list-style: none;">
+  <li *ngFor="let item of todolist">
+    <br>
+    <input type="checkbox" [(ngModel)]="item.completed">{{item.task}}
+    <div *ngIf="item.completed"><p>completed</p>
+    <span *ngIf="item.task==='swimming'">
+      Venue 1:{{item.venue1}}<br>venue 2 :{{item.venue2}}
+    </span>
+  </div>
+  </li>
+</ul>
+
